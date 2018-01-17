@@ -3,8 +3,10 @@
     Author: gonz;
     Version: 1.0;
 */
+*{
+    text-decoration: none;
+}
 body{
-    background-image: url('/wp-content/themes/food-theme/images/generic-bg.jpg');
     color: #555;
 }
 li{
@@ -31,11 +33,7 @@ h1,h3{
 
 }
 header{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/wp-content/themes/food-theme/images/hero.jpg');
-    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/wp-content/themes/food-theme/images/hero.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/wp-content/themes/food-theme/images/hero.jpg');
     background-attachment: fixed;
-
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -136,6 +134,7 @@ te{
 .btn-full{
     color: white;
     background: #e67e22;
+    text-decoration: none;
 }
 
 .btn-full:hover{
@@ -286,7 +285,6 @@ h1::after{
 }
 
 .section-testimonials{
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(Omnifood%20Contents/back-customers.jpg);
     color: #f4f4f4;
     background-attachment: fixed;
     background-position: center;

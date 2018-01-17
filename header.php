@@ -15,28 +15,33 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
   <!-- fontawsome -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/Vendors/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <style>
+    header{
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/wp-content/themes/food-theme/images/hero.jpg");
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("<?php bloginfo('stylesheet_directory')?>/images/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("<?php bloginfo('stylesheet_directory')?>/images/hero.jpg");
+    }
+
+    .section-testimonials{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php bloginfo('stylesheet_directory')?>/images/back-customers.jpg);
+    }
+
+    body{
+    background-image: url("<?php bloginfo('stylesheet_directory')?>/images/generic-bg.jpg");
+    }
+  </style>
 </head>
 <?php wp_head() ;?>
 <body>
     <header>
         <div class="container">
-                 <a href="/">
-                    <img class="logo-white" src="<?php bloginfo('stylesheet_directory')?>/logo-white.png" alt="Logo">
+                 <a href="<?php echo esc_url(home_url( '/')) ;?>">
+                    <img class="logo-white" src="<?php bloginfo('stylesheet_directory')?>/images/logo-white.png" alt="Logo">
                 </a> 
-                    <ul class="main-nav">
-                        <li>
-                            <a href="/omni-food/index.php">Food Delivery</a>
-                        </li>
-                        <li>
-                            <a href="#">How it Works</a>
-                        </li>
-                        <li>
-                            <a href="#">our cites</a>
-                        </li>
-                        <li>
-                            <a href="#">sign up</a>
-                        </li>
-                    </ul>
+                <?php wp_nav_menu( array(
+                    'theme_location'=>'primary',
+                    'menu_class'=>'main-nav'
+                ) ) ;?>
             <section class="welcome">
                 <h1>
                     Goodbye junk food. Hello super healthy meals.</h1>
