@@ -10,4 +10,5 @@
 
     }
     add_action('after_setup_theme', 'food_theme_setup');
+
 ?>

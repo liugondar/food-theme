@@ -35,8 +35,10 @@
 <body>
     <header>
         <div class="container">
+        <?php $logo_img= get_field('logo_img'); ;?>
                  <a href="<?php echo esc_url(home_url( '/')) ;?>">
-                    <img class="logo-white" src="<?php bloginfo('stylesheet_directory')?>/images/logo-white.png" alt="Logo">
+                    <img class="logo-white" src="<?php echo $logo_img['url'];?>" alt="Logo">
+
                 </a> 
                 <?php wp_nav_menu( array(
                     'theme_location'=>'primary',
