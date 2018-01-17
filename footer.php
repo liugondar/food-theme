@@ -1,5 +1,5 @@
+<?php wp_footer() ;?>
     <footer>
-
     <div class="container">
                 <div class="col span-1-of-2">
                     <ul class="footer-nav">

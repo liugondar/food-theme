@@ -1,13 +1,13 @@
-<?php include './header.php'; ?>
+<?php get_header( ) ;?>
     <div class="main">
-                <?php include './contents/content-features.php' ;?>
-            <?php include './contents/content-photogallery.php' ;?>
-            <?php include './contents/content-steps.php' ;?>
-            <?php include './contents/content-citys.php'  ;?>
-            <?php include './contents/content-testimonials.php' ;?>
-            <?php include './contents/content-plans.php' ;?>
-            <?php include './contents/content-form.php' ;?>
+    <?php get_template_part('contents/content','features') ;?>
+    <?php get_template_part('contents/content','photogallery') ;?>
+    <?php get_template_part('contents/content','steps') ;?>
+    <?php get_template_part('contents/content','citys') ;?>
+    <?php get_template_part('contents/content','testimonials') ;?>
+    <?php get_template_part('contents/content','plans') ;?>
+    <?php get_template_part('contents/content','form') ;?>
     </div>
     <div class="clr"></div>
 
-<?php include './footer.php' ;?>
+<?php get_footer(  ) ;?>
