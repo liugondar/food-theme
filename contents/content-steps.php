@@ -3,7 +3,7 @@
                     <h1>How it works &mdash; simple as 1,2,3</h1>
                 <div class="show-steps">
                     <div class="col span-1-of-2" >
-                        <img src="./img/app-iPhone.png" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/app-iPhone.png" alt="">
                     </div>
                     <div class="col span-1-of-2" >
                         <div class="step">
@@ -19,8 +19,8 @@
                             <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                         </div>
                          <div class="download">
-                              <a href=""><img src="./img/download-app-android.png" alt=""></a>
-                              <a href=""><img src="./img/download-app.svg" alt=""></a>
+                              <a href=""><img src="<?php bloginfo('template_directory'); ?>/images/download-app-android.png" alt=""></a>
+                              <a href=""><img src="<?php bloginfo('template_directory'); ?>/images/download-app.svg" alt=""></a>
                          </div>
                     </div>
                 </div></div>

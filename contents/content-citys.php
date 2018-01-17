@@ -4,7 +4,7 @@
         </div>
                 <div class="container" >
                     <div class="col span-1-of-4 box-city">
-                        <img src="./img/san-francisco.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/san-francisco.jpg" alt="">
                             <h3>
                                 san fracisco
                             </h3>
@@ -15,7 +15,7 @@
                             </div>
                     </div>
                     <div class="col span-1-of-4 box-city">
-                        <img src="./img/lisbon-3.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/lisbon-3.jpg" alt="">
                             <h3>
                                 libson
                             </h3>
@@ -27,7 +27,7 @@
                             </div>
                     </div>
                     <div class="col span-1-of-4 box-city">
-                        <img src="./img/berlin.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/berlin.jpg" alt="">
                             <h3>
                                 berlin
                             </h3>
@@ -38,7 +38,7 @@
                             </div>
                     </div>
                     <div class="col span-1-of-4 box-city ">
-                        <img src="./img/london.jpg" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/london.jpg" alt="">
                             <h3>
                                 london
                             </h3>

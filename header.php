@@ -8,21 +8,20 @@
     <title>Omni Food</title>
     <link rel="stylesheet" href="style.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="./Vendors/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./Vendors/grid.css">
-
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/Vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/Vendors/grid.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
   <!-- fontawsome -->
-  <link rel="stylesheet" href="./Vendors/css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/Vendors/css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <?php wp_head() ;?>
 <body>
     <header>
         <div class="container">
                  <a href="/">
-                    <img class="logo-white" src="./img/logo-white.png" alt="Logo">
+                    <img class="logo-white" src="<?php bloginfo('stylesheet_directory')?>/logo-white.png" alt="Logo">
                 </a> 
                     <ul class="main-nav">
                         <li>
