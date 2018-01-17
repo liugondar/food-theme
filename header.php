@@ -35,7 +35,9 @@
 <body>
     <header>
         <div class="container">
-        <?php $logo_img= get_field('logo_img'); ;?>
+        <?php $logo_img= get_field('logo_img');
+            $welcome=get_field('welcome') ;
+        ;?>
                  <a href="<?php echo esc_url(home_url( '/')) ;?>">
                     <img class="logo-white" src="<?php echo $logo_img['url'];?>" alt="Logo">
 
@@ -45,15 +47,20 @@
                     'menu_class'=>'main-nav'
                 ) ) ;?>
             <section class="welcome">
-                <h1>
-                    Goodbye junk food. Hello super healthy meals.</h1>
+            <h1>
+                <?php echo $welcome ;?>
+            </h1>
+            <?php $loop=new WP_Query(array(
+                'post_type'=>'buttons_for_header',
+                'orderby'=>'post_id',
+                'order'=>'ASC'
+            )) ;?>
                 <div class="show-button">
-                    <a class="welcome-button btn-full" href="#">
-                        I'm hungry
+                <?php while($loop->have_posts()): $loop->the_post();?>
+                    <a class="<?php the_field('button_style');?>" href="<?php echo the_field('button_link');?>">
+                        <?php the_field('content_button') ;?>
                     </a>
-                    <a class="welcome-button btn-ghost" href="#">
-                        Show me more
-                    </a>
+                <?php endwhile ;?>
                 </div>
             </section>
         </div>
