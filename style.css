@@ -3,11 +3,38 @@
     Author: gonz;
     Version: 1.0;
 */
-*{
-    text-decoration: none;
+@font-face{
+    font-family: 'blackJack';
+    src: url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/blackjack/blackjack.eot');
+    src: url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/blackjack/blackjack.eot?#iefix') format('embedded-opentype'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/blackjack/blackjack.woff') format('woff'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/blackjack/blackjack.ttf') format('truetype'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/blackjack/blackjack.svg#HelveticaNeue65Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'goudy';
+    src: url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/goudy/goudy.eot');
+    src: url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/goudy/goudy.eot?#iefix') format('embedded-opentype'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/goudy/goudy.woff') format('woff'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/goudy/goudy.ttf') format('truetype'),
+    url('http://localhost/wordpress/wp-content/themes/food-theme/Vendors/fonts/goudy/goudy.svg#HelveticaNeue65Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.fa{
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 120%;
+    color: #e67e22;
+    margin-top: -3px;
 }
 body{
     color: #555;
+    font-family: 'goudy','Raleway',sans-serif;
 }
 li{
     list-style: none;
@@ -25,13 +52,16 @@ h3{
 h1{
     font-size: 2em;
     text-align: center;
+    font-family: blackJack,birdsOfParadise;
 }
 h1,h3{
     margin: 30px auto;
     text-transform: uppercase;
+    
     margin: 30px;
 
 }
+
 header{
     background-attachment: fixed;
     height: 100vh;
@@ -272,13 +302,14 @@ h1::after{
     padding: 3px;
     border: 2px solid black;
 }
-.box-city i{
+.box-city i,.features-grid i{
     margin-right:10px;
     vertical-align: middle;
     line-height: 120%;
     color: #e67e22;
     margin-top: -3px;
 }
+
 
 .box-city h3{
     padding-bottom:10px;

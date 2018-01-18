@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
   <!-- fontawsome -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/Vendors/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <style>
     header{
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/wp-content/themes/food-theme/images/hero.jpg");
@@ -29,15 +31,21 @@
     body{
     background-image: url("<?php bloginfo('stylesheet_directory')?>/images/generic-bg.jpg");
     }
+
+    @font-face{
+        font-family: birdsOfParadise;
+        src: url(BirdsofParadise.ttf);
+    }
   </style>
 </head>
-<?php wp_head() ;?>
+<?php wp_head();
+    $logo_img= get_field('logo_img');
+    $welcome=get_field('welcome') ;
+
+?>
 <body>
     <header>
         <div class="container">
-        <?php $logo_img= get_field('logo_img');
-            $welcome=get_field('welcome') ;
-        ;?>
                  <a href="<?php echo esc_url(home_url( '/')) ;?>">
                     <img class="logo-white" src="<?php echo $logo_img['url'];?>" alt="Logo">
 
