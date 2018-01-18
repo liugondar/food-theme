@@ -1,9 +1,17 @@
+<?php 
+    $section_how_it_work_title=get_field('field_5a607a4a137ec');
+wp_reset_query();
+    $section_how_it_work_img=get_field('field_5a607bad397d4');
+    debug_to_console($section_how_it_work_img['url']);
+    ?>
             <section class="section-steps">
                 <div class="container">
-                    <h1>How it works &mdash; simple as 1,2,3</h1>
+                    <h1>
+                    <?php echo $section_how_it_work_title ;?>
+                    </h1>
                 <div class="show-steps">
                     <div class="col span-1-of-2" >
-                        <img src="<?php bloginfo('template_directory'); ?>/images/app-iPhone.png" alt="">
+                        <img src="<?php echo $section_how_it_work_img['url'] ;?>" alt="">
                     </div>
                     <div class="col span-1-of-2" >
                         <div class="step">
