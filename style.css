@@ -349,6 +349,7 @@ cite img{
     padding: 5px 20px;
 }
 
+
 h3{
     text-align: left;
     padding: 20px ;
@@ -372,7 +373,7 @@ color: #e67e22;
     border:0;
 }
 .plan-price span{
-    font-size: 30%;
+    font-size: 70%;
     font-weight: 400;
 }
 .plan-price-meal{
