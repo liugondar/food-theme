@@ -2,7 +2,6 @@
     $section_how_it_work_title=get_field('field_5a607a4a137ec');
 wp_reset_query();
     $section_how_it_work_img=get_field('field_5a607bad397d4');
-    debug_to_console($section_how_it_work_img['url']);
     ?>
             <section class="section-steps">
                 <div class="container">

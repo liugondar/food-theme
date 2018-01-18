@@ -1,53 +1,30 @@
+<?php $section_city_title=get_field('field_5a60a56dc966c') ;?>
             <section class="section-citys">
                 <div class="container">
-                <h1>We're currently in these cities</h1>
+                <h1><?php echo $section_city_title ;?></h1>
         </div>
                 <div class="container" >
-                    <div class="col span-1-of-4 box-city">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/san-francisco.jpg" alt="">
-                            <h3>
-                                san fracisco
-                            </h3>
-                            <div>
-                                <p><i class="fa fa-laptop" aria-hidden="true"> </i>1600+ Happy Eaters</p>
-                                <p><i class="fa fa-cloud" aria-hidden="true"></i> 1600+ Happy Eaters</p>
-                                <p><i class="fa fa-heart" aria-hidden="true"><a href="http://"> 1600+ Happy Eaters</a></i></p>
-                            </div>
-                    </div>
-                    <div class="col span-1-of-4 box-city">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/lisbon-3.jpg" alt="">
-                            <h3>
-                                libson
-                            </h3>
-                            <div>
-                                <p><i class="fa fa-laptop" aria-hidden="true"> </i>1600+ Happy Eaters</p>
-                                <p><i class="fa fa-cloud" aria-hidden="true"></i> 1600+ Happy Eaters</p>
-                                <p><i class="fa fa-heart" aria-hidden="true"><a href="http://"> 1600+ Happy Eaters</a></i></p>
+                <?php 
+                    $loop= new WP_Query(array(
+                        'post_type'=>'section_show_cities',
+                        'orderby'=>'post_id',
+                        'order'=>'ASC'
+                    )) 
+                ?>
 
-                            </div>
-                    </div>
+                <?php while($loop->have_posts()): $loop->the_post() ;?>
                     <div class="col span-1-of-4 box-city">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/berlin.jpg" alt="">
+                        <?php $temp=get_field('city_img') ;?>
+                        <img src="<?php echo $temp['url'] ;?>" alt="">
                             <h3>
-                                berlin
+                               <?php echo the_field('title') ;?> 
                             </h3>
                             <div>
-                                <p><i class="fa fa-laptop" aria-hidden="true"> </i>1600+ Happy Eaters</p>
-                                <p><i class="fa fa-cloud" aria-hidden="true"></i> 1600+ Happy Eaters</p>
-                                <p><i class="fa fa-heart" aria-hidden="true"><a href="http://"> 1600+ Happy Eaters</a></i></p>
+                                <p><i class="fa fa-laptop" aria-hidden="true"> </i><?php echo the_field('feature1') ;?></p>
+                                <p><i class="fa fa-cloud" aria-hidden="true"></i><?php echo the_field('feature1') ;?> </p>
+                                <p><i class="fa fa-heart" aria-hidden="true"></i><?php echo the_field('feature1') ;?></p>
                             </div>
                     </div>
-                    <div class="col span-1-of-4 box-city ">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/london.jpg" alt="">
-                            <h3>
-                                london
-                            </h3>
-                            <div>
-                                <p><i class="fa fa-laptop" aria-hidden="true"> </i>1600+ Happy Eaters</p>
-                                <p><i class="fa fa-cloud" aria-hidden="true"></i> 1600+ Happy Eaters</p>
-                                <p><i class="fa fa-heart" aria-hidden="true"><a href="http://"> 1600+ Happy Eaters</a></i></p>
-                            </div>
-                    </div>
-
+                <?php endwhile ;?>
                 </div>
             </section>
