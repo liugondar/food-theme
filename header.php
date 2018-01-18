@@ -32,16 +32,16 @@
     background-image: url("<?php bloginfo('stylesheet_directory')?>/images/generic-bg.jpg");
     }
 
-    @font-face{
-        font-family: birdsOfParadise;
-        src: url(BirdsofParadise.ttf);
-    }
   </style>
 </head>
-<?php wp_head();
-    $logo_img= get_field('logo_img');
-    $welcome=get_field('welcome') ;
+<?php  
 
+    $logo_img= get_field('logo_img',get_option('page_for_posts'));
+    $test_field=get_post_meta(189,'test_field',true);
+    $welcome=get_field('field_5a6070c301175');
+
+    wp_reset_query();
+    wp_head();
 ?>
 <body>
     <header>
@@ -70,6 +70,7 @@
                     </a>
                 <?php endwhile ;?>
                 </div>
+                <?php wp_reset_query(); ?>
             </section>
         </div>
     </header>
